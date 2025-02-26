@@ -15,6 +15,5 @@ CREATE TABLE IF NOT EXISTS clicks (
   ubid VARCHAR(255) NOT NULL,
   ip_address VARCHAR(45) NOT NULL,
   country VARCHAR(100),
-  UNIQUE KEY unique_short_code_ubid (short_code, ubid),
   FOREIGN KEY (short_code) REFERENCES urls(short_code) ON DELETE CASCADE
 );
